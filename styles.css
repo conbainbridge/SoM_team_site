@@ -1,0 +1,168 @@
+/* Global styles */
+:root {
+  --bg-color: #1985a1;
+  --header-text-color: #ffb742;
+  --header-bg: #282a2b;
+  --card-bg-color: #282a2b;
+  --text-color: white;
+  --card-head: #ffb742;
+  --link-color: #1985a1;
+}
+
+body {
+  margin: 0px;
+  height: 100vh;
+  background-image: linear-gradient(white, var(--bg-color));
+  background-attachment: fixed;
+  /* background-color: var(--bg-color); */
+  font-family: "Space Grotesk", sans-serif;
+}
+a {
+  color: var(--link-color);
+}
+a:hover {
+  color: var(--card-head);
+}
+
+/* Header, footer, navbar */
+.float-head {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--header-bg);
+  font-size: 50px;
+  font-family: "Sixtyfour", sans-serif;
+}
+.header a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffb742;
+  margin: 15px;
+}
+.header a:hover {
+  color: white;
+  text-decoration: none;
+}
+.buffer {
+  /* Heights to accomodate header and anchor spacing for mobile devices */
+  height: 135px;
+}
+
+nav {
+  background-color: black;
+  padding: 10px 0px;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  font-size: 2.7vh;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline;
+  padding: 0px 20px;
+}
+.lighter-link a, nav a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+.lighter-link a:hover, nav a:hover {
+  color: #ffb742;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+#workshop, #team {
+  position: relative;
+  float: left;
+  visibility: hidden;
+  top: -145px;
+}
+
+footer {
+  background-color: #282a2b;
+  text-align: center;
+  color: #ffb742;
+  padding: 15px;
+  bottom: 0;
+}
+
+/* Main content stylings */
+.center {
+  width: 95%;
+  min-width: 250px;
+  margin: auto;
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  padding: 15px;
+  margin: 15px 0px;
+  border-radius: 10px;
+  height: inherit;
+  overflow: hidden;
+}
+.card-title {
+  color: var(--card-head);
+  font-size: 28px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card-subtitle {
+  color: #05d8f0;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+/* Styles for team section */
+.person {
+  clear: left;
+}
+.team-image {
+  float: left;
+  object-fit: cover;
+  width: 260px;
+  height: 330px;
+  border-radius: 10px;
+  margin: 0px 15px 15px 0px;
+}
+.team-text {
+  margin: 0;
+  line-height: 25px;
+}
+
+
+@media only screen and (orientation: portrait) {
+  .buffer {
+    /* Heights to accomodate header and anchor spacing for mobile devices */
+    height: 185px;
+  }
+  #workshop, #team {
+    position: relative;
+    float: left;
+    visibility: hidden;
+    top: -195px;
+  }
+  nav {
+      font-size: 24px;
+  }
+  /* Updates layout for each person in Team when smaller width*/
+  .person {
+      text-align: center;
+  }
+  .team-image {
+      float: none;
+      margin: 0;
+  }
+}
