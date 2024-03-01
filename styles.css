@@ -10,6 +10,7 @@
 }
 
 body {
+  text-align: left;
   margin: 0px;
   height: 100vh;
   background-image: linear-gradient(white, var(--bg-color));
@@ -22,6 +23,10 @@ a {
 }
 a:hover {
   color: var(--card-head);
+}
+
+.img-center {
+    text-align: center;
 }
 
 /* Header, footer, navbar */
